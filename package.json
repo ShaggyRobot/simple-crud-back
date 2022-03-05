@@ -1,0 +1,40 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@webpack-cli/generators": "^2.4.1",
+    "babel-loader": "^8.2.3",
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "jest": "^27.3.1",
+    "supertest": "^6.1.6",
+    "webpack": "^5.64.2",
+    "webpack-cli": "^4.9.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "version": "1.0.0",
+  "description": "Simple CRUD api",
+  "name": "simple-crud-api",
+  "scripts": {
+    "test": "jest --verbose",
+    "start:dev": "nodemon src/app.js",
+    "start:prod": "webpack --mode=production --node-env=production",
+    "poststart:prod": "node dist/bundle.js",
+    "lint": "eslint ./src",
+    "lint-fix": "eslint ./src --fix",
+    "watch": "webpack --watch"
+  },
+  "dependencies": {
+    "@types/jest": "^27.0.3",
+    "commonjs-variables-for-esmodules": "^1.1.0",
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
+  }
+}
